@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
-
-@import 'normalize';
+@import 'normalize',
+        '_mixins',
+        '_variables';
 
 * {
     box-sizing: border-box;
@@ -20,4 +20,55 @@ body {
     margin: 0 auto;
     max-width: 1140px;
     width: 96%;
+}
+
+// -------------------------------------------------- HEADER
+
+.slider {
+    width: 1920px;
+    height: 100vh;
+}
+
+.services {
+    height: 372px;
+}
+
+.works {
+    height: 702px;
+}
+
+.text {
+    height: 150px;
+}
+
+.projects {
+    height: 1166px;
+}
+
+.video {
+    height: 706px;
+}
+
+.mobile {
+    height: 694px;
+}
+
+.counters {
+    height: 297px;
+}
+
+.second-slider {
+    height: 752px;
+}
+
+.partners {
+    height: 488px;
+}
+
+.footer {
+    height: 508px;
+}
+
+.bottom {
+    height: 112px;
 }

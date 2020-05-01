@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 103" width="103" height="103">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.2;fill: #000000 } 
+	</style>
+	<g id="CONTENT">
+		<g id="Video Presentation">
+			<g id="Play Video">
+				<path id="circle" class="shp0" d="M52 2C79.61 2 102 24.39 102 52C102 79.61 79.61 102 52 102C24.39 102 2 79.61 2 52C2 24.39 24.39 2 52 2Z" />
+			</g>
+		</g>
+	</g>
+</svg>
