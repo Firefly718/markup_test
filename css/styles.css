@@ -326,6 +326,14 @@ body {
   max-width: 1928px;
   width: 84%; }
 
+.first-section {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/header/bg-header.png);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/header/bg-header.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/header/bg-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,11 +343,9 @@ header {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  outline: 2px green dashed; }
+  align-items: center; }
 
 .menu {
-  outline: 2px orange dashed;
   margin: auto; }
   .menu__items {
     display: -webkit-box;

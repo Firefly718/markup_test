@@ -22,6 +22,11 @@
     color: #fff;
 }
 
+@mixin bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @mixin tr {
     transition: all .4s ease-in;
 }
