@@ -14,16 +14,47 @@ html {
 body {
     min-height: 100%;
     font: 1.5rem/1.6 'Open Sans', sans-serif;
+    background-color: gray;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1140px;
-    width: 96%;
+    max-width: 1928px;
+    width: 84%; // 64% in psd
 }
 
 // -------------------------------------------------- HEADER
+header {
+    @include flex;
+    outline: 2px green dashed;
+}
 
+.menu {
+    outline: 2px orange dashed;
+    margin: auto;
+    &__items {
+        @include flex;
+        @include list;
+    }
+    &__item {
+        padding: 0 1.2rem;
+    }
+    &__item:nth-last-child(2) {
+        padding-left: 62px - 14px;
+    }
+    &__link {
+        @include link;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 1.4rem;
+        &--active {
+            color: $link-active;
+        }
+    }
+}
+
+
+//
 .slider {
     width: 1920px;
     height: 100vh;
