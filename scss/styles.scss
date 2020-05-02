@@ -36,12 +36,12 @@ body {
 
 header {
     @include flex;
-    outline: 2px green dashed;
+    // outline: 2px green dashed;
     padding-top: 3.6rem;
 }
 
 .menu {
-    outline: 2px orange dashed;
+    // outline: 2px orange dashed;
     margin: auto;
     &__items {
         @include flex;
