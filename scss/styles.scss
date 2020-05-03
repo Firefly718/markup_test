@@ -77,11 +77,26 @@ header {
     height: 372px;
     background-color: #fff;
     text-align: center;
+    outline: 2px dashed red;
+    padding-top: 8rem;
     &__items {
         @include flex;
+        outline: 2px dashed orangered;
     }
-    // justify-content: space-evenly;
-    // padding: 0 17px;
+    &__title {
+        font-size: 2.2rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        // margin-top: 2.4rem;
+        outline: 2px dashed orange;
+    }
+    &__icon {
+        display: block;
+        outline: 2px dashed greenyellow;
+        margin-bottom: 2.6rem;
+        // text-align: center;
+        margin: 0 auto 2.6rem auto;
+    }
 }
 
 .works {

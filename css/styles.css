@@ -382,7 +382,9 @@ header {
 .services {
   height: 372px;
   background-color: #fff;
-  text-align: center; }
+  text-align: center;
+  outline: 2px dashed red;
+  padding-top: 8rem; }
   .services__items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -392,7 +394,18 @@ header {
     justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    outline: 2px dashed orangered; }
+  .services__title {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    outline: 2px dashed orange; }
+  .services__icon {
+    display: block;
+    outline: 2px dashed greenyellow;
+    margin-bottom: 2.6rem;
+    margin: 0 auto 2.6rem auto; }
 
 .works {
   height: 702px;
