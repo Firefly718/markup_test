@@ -77,18 +77,59 @@ header {
     height: 372px;
     background-color: #fff;
     text-align: center;
-    outline: 2px dashed red;
+    // outline: 2px dashed red;
     padding-top: 8rem;
     &__items {
         @include flex;
-        outline: 2px dashed orangered;
+        // outline: 2px dashed orangered;
     }
     &__title {
         font-size: 2.2rem;
         font-family: 'Raleway', sans-serif;
         font-weight: 600;
-        // margin-top: 2.4rem;
-        outline: 2px dashed orange;
+        // outline: 2px dashed orange;
+        &--pen {
+            &::before {
+                background-image: url(../img/services/icon-pencil.svg);
+                @include iconBefore;
+            }
+        }
+        &--dev {
+            &::before {
+                background-image: url(../img/services/icon-dev.svg);
+                @include iconBefore;
+            }
+        }
+        &--cust {
+            &::before {
+                background-image: url(../img/services/icon-cust.svg);
+                @include iconBefore;
+                // outline: 2px dashed saddlebrown;
+            }
+        }
+        &--mark {
+            &::before {
+                background-image: url(../img/services/icon-mark.svg);
+                @include iconBefore;
+                background-size: 100% 100%;
+                // outline: 2px dashed saddlebrown;
+            }
+        }
+    }
+    &__subtitle {
+        &::after {
+            content: '';
+            display: block;
+            width: 7rem;
+            height: 2px;
+            background-color: #f1eee9;
+            margin: 3rem auto 0 auto;
+        }
+        &--active {
+            &::after {
+                background-color: $link-active;
+            }
+        }
     }
     &__icon {
         display: block;

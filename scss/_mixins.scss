@@ -5,6 +5,17 @@
 //     color: $color;
 //     line-height: $line;
 // }
+@mixin iconBefore {
+    content: "";
+        display: block;
+        background-size: cover;
+        width: 44px;
+        height: 44px;
+        margin: 0 auto 3rem auto;
+        background-repeat: no-repeat;
+        // background-position: center;
+}
+
 @mixin flex {
     display: flex;
     justify-content: space-between;
