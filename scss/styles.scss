@@ -72,20 +72,31 @@ header {
     height: 100vh;
 }
 
+// -------------------------------------------------- SERVICES
 .services {
     height: 372px;
+    background-color: #fff;
+    text-align: center;
+    &__items {
+        @include flex;
+    }
+    // justify-content: space-evenly;
+    // padding: 0 17px;
 }
 
 .works {
     height: 702px;
+    background-color: $third-bg;
 }
 
 .text {
     height: 150px;
+    background: $grad-bg;
 }
 
 .projects {
     height: 1166px;
+    background-color: #fff;
 }
 
 .video {
@@ -94,24 +105,32 @@ header {
 
 .mobile {
     height: 694px;
+    background-color: $third-bg;
 }
 
 .counters {
     height: 297px;
+    background: $grad-bg;
 }
 
-.second-slider {
+.posts {
     height: 752px;
+    background-color: #fff;
 }
 
 .partners {
     height: 488px;
+    background-image: url(../img/partners/partners-bg.png);
+    @include bg;
+    background-position: center;
 }
 
 .footer {
     height: 508px;
+    background-color: $footer-bg;
 }
 
 .bottom {
     height: 112px;
+    background-color: $footer-sec-bg;
 }

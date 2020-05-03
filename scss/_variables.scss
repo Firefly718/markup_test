@@ -10,13 +10,14 @@ $text-color: #8c8c8c;
 $link-active: #c7b299;
 
 $secondary-text: #615855;
-$secondary-bg: #382820;
+// $secondary-bg: #382820;
+$grad-bg: linear-gradient(to right, #211b19, #382720, #4e3427);
 
 $menu-bg: #998575;
 $card-active: #352f2d;
 $card-text: #d1d1d1;
 
-$third-bg: #34261f;
+$third-bg: #fbfaf8;
 
 $date-num-bg: #363636;
 $date-sec-bg: #242424;
