@@ -64,6 +64,14 @@
     }
 }
 
+@mixin buttonText {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: 800;
+    text-align: center;
+}
 // @mixin posCenter {
 //     position: absolute;
 //     top: 50%;
