@@ -1,10 +1,24 @@
-// @mixin text($color: inherit, $family: inherit, $size: 1.6rem, $weight: 400, $line: 1.7) {
-//     font-family: $family;
-//     font-size: $size;
-//     font-weight: $weight;
-//     color: $color;
-//     line-height: $line;
-// }
+@mixin text {
+    font-size: 16px;
+    line-height: 28px;
+    color: $text-color;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-align: center;
+}
+
+@mixin posA {
+    position: absolute;
+    bottom: 0;
+}
+
+@mixin title {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;;
+}
+
 @mixin iconBefore {
     content: "";
         display: block;
@@ -13,7 +27,6 @@
         height: 44px;
         margin: 0 auto 3rem auto;
         background-repeat: no-repeat;
-        // background-position: center;
 }
 
 @mixin flex {
@@ -50,8 +63,6 @@
         @content;
     }
 }
-
-
 
 // @mixin posCenter {
 //     position: absolute;

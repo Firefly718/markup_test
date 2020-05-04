@@ -84,9 +84,7 @@ header {
         // outline: 2px dashed orangered;
     }
     &__title {
-        font-size: 2.2rem;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600;
+        @include title;
         // outline: 2px dashed orange;
         &--pen {
             &::before {
@@ -95,6 +93,7 @@ header {
             }
         }
         &--dev {
+            color: $link-active;
             &::before {
                 background-image: url(../img/services/icon-dev.svg);
                 @include iconBefore;
@@ -117,6 +116,8 @@ header {
         }
     }
     &__subtitle {
+        font-size: 1.4rem;
+        color: $text-color;
         &::after {
             content: '';
             display: block;
@@ -143,6 +144,43 @@ header {
 .works {
     height: 702px;
     background-color: $third-bg;
+    position: relative;
+    padding-top: 4rem; // 8rem - real
+    &__items {
+        // outline: 2px dashed green;
+    }
+    &__title {
+        @include title;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    &__subtitle {
+        @include text;
+        width: 768px;
+        height: 65px;
+        margin: auto;
+    }
+    &__image {
+        &--center {
+            @include posA;
+            left: 50%;
+            transform: translateX(-50%);
+            // outline: 2px dashed blue;
+            // height: 480px;
+            // width: 768px;
+            z-index: 2;
+        }
+        &--left {
+            @include posA;
+            left: 5%;
+            z-index: 1;
+        }
+        &--right {
+            @include posA;
+            right: 5%;
+            z-index: 1;
+        }
+    }
 }
 
 .text {
