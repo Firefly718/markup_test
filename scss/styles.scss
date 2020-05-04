@@ -209,21 +209,50 @@ header {
         color: $link-active;
     }
     &__button {
-        @include buttonText;
-        width: 17rem;
-        height: 4.6rem;
-        border-radius: 5px;
-        background-color: $brand-color;
-        border: 0;
-        box-shadow: 0px 2px 0px 0px $dark-brand-color;
-        // border-bottom: 2px;
-        // border-color: $dark-brand-color;
+        @include button;
     }
 }
 
 .projects {
     height: 1166px;
     background-color: #fff;
+    // outline: 2px dashed green;
+    &__title {
+        @include title;
+        font-size: 3rem;
+    }
+    &__subtitle {
+        @include text;
+        // display: block;
+        margin: auto;
+        width: 770px;
+        height: 65px;
+    }
+    // &__grid {
+    //     // margin: auto;
+    //     // outline: 2px dashed red;
+    // }
+    &__menu {
+        @include list;
+        @include flex;
+        justify-content: space-evenly;
+        // justify-content: initial;
+        margin: 0 14%;
+        // padding: auto;
+        // outline: 2px green dashed;
+    }
+    &__item {
+        @include text;
+        // outline: 2px pink dashed;
+        padding: 0.8rem 2.6rem;
+        border-radius: 5px;
+        border: 1px solid rgba(128, 128, 128, .2);
+        &--active {
+            background-color: $brand-color;
+            color: #fff;
+            border: none;
+        }
+    }
 }
 
 .video {
