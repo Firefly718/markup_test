@@ -253,6 +253,82 @@ header {
             border: none;
         }
     }
+    &__cards {
+        display: grid;
+        outline: 2px dashed green;
+        min-height: 70rem;
+        margin-top: 4rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+    }
+    &__card {
+        // outline: 2px dashed cornflowerblue;
+        &--first {
+            grid-area: 1 / 1 / 2 / 2; 
+            background-image: url(../img/projects/grid-book.png);
+            @include bgCard;
+            // background-color: black;
+        }
+        &--sec {
+            grid-area: 1 / 2 / 2 / 3;
+            background-image: url(../img/projects/grid-book.png);
+            @include bgCard;
+            // background-color: blue;
+        }
+        &--third {
+            grid-area: 1 / 3 / 2 / 4;
+            background-image: url(../img/projects/grid-book.png);
+            @include bgCard;
+            // background-color: blueviolet;
+        }
+        &--fourth {
+            grid-area: 2 / 1 / 3 / 2;
+            background-image: url(../img/projects/grid-book.png);
+            @include bgCard;
+            // background-color: green;
+        }
+        &--fifth {
+            grid-area: 2 / 2 / 3 / 3;
+            background-image: url(../img/projects/grid-book.png);
+            @include bgCard;
+            // background-color: chocolate;
+        }
+        &--sixth {
+            grid-area: 2 / 3 / 3 / 4;
+            background-image: url(../img/projects/grid-book.png);
+            @include bgCard;
+            // background-color: red;
+            z-index: 1;
+        }
+    }
+    &__text {
+        min-height: 94px;
+        width: 97%;
+        // display: block;
+        margin-top: 63%;
+        // outline: 2px dashed pink;
+        background-color: $third-bg;
+        z-index: 2;
+        padding: 2.4rem 3rem 2.4rem 3rem;
+    }
+    &__title {
+        display: block;
+        @include titleGrid;
+        text-align-last: left;
+        // padding: 3rem 3rem 3rem 3rem;
+        // outline: 2px dashed blue;
+    }
+    &__subtitle {
+        @include text;
+        color: $card-text;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        // display: block;
+        // padding: 0 3rem 3rem 3rem;
+        // outline: 2px dashed red;
+    }
 }
 
 .video {

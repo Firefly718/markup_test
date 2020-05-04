@@ -609,6 +609,74 @@ header {
       background-color: #988574;
       color: #fff;
       border: none; }
+  .projects__cards {
+    display: grid;
+    outline: 2px dashed green;
+    min-height: 70rem;
+    margin-top: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem; }
+  .projects__card--first {
+    grid-area: 1 / 1 / 2 / 2;
+    background-image: url(../img/projects/grid-book.png);
+    background-size: 97% 234px;
+    background-repeat: no-repeat; }
+  .projects__card--sec {
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url(../img/projects/grid-book.png);
+    background-size: 97% 234px;
+    background-repeat: no-repeat; }
+  .projects__card--third {
+    grid-area: 1 / 3 / 2 / 4;
+    background-image: url(../img/projects/grid-book.png);
+    background-size: 97% 234px;
+    background-repeat: no-repeat; }
+  .projects__card--fourth {
+    grid-area: 2 / 1 / 3 / 2;
+    background-image: url(../img/projects/grid-book.png);
+    background-size: 97% 234px;
+    background-repeat: no-repeat; }
+  .projects__card--fifth {
+    grid-area: 2 / 2 / 3 / 3;
+    background-image: url(../img/projects/grid-book.png);
+    background-size: 97% 234px;
+    background-repeat: no-repeat; }
+  .projects__card--sixth {
+    grid-area: 2 / 3 / 3 / 4;
+    background-image: url(../img/projects/grid-book.png);
+    background-size: 97% 234px;
+    background-repeat: no-repeat;
+    z-index: 1; }
+  .projects__text {
+    min-height: 94px;
+    width: 97%;
+    margin-top: 63%;
+    background-color: #fbfaf8;
+    z-index: 2;
+    padding: 2.4rem 3rem 2.4rem 3rem; }
+  .projects__title {
+    display: block;
+    width: 312px;
+    height: 27px;
+    font-size: 2rem;
+    color: #c7b299;
+    font-family: "Raleway";
+    font-weight: 500;
+    -moz-text-align-last: left;
+    text-align-last: left; }
+  .projects__subtitle {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-align: center;
+    color: #8c8c8c;
+    color: #d1d1d1;
+    font-size: 1.4rem;
+    line-height: 2rem; }
 
 .video {
   height: 706px; }
