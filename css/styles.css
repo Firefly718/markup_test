@@ -1125,4 +1125,60 @@ header {
 
 .bottom {
   height: 112px;
-  background-color: #101010; }
+  background-color: #101010;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .bottom__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #8c8c8c;
+    width: 100%; }
+  .bottom__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .bottom__list--sec {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .bottom__link {
+    text-decoration: none;
+    color: #fff;
+    color: #8c8c8c; }
+    .bottom__link--name {
+      text-decoration: none;
+      color: #fff;
+      color: #959595; }
+  .bottom__item:not(:last-of-type)::after {
+    content: "|";
+    color: #252525;
+    padding: 0 1rem; }
