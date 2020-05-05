@@ -26,6 +26,7 @@ body {
 
 // -------------------------------------------------- HEADER
 .first-section {
+    // background-image: url(../img/header/bg-header.png);
     background: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
@@ -558,13 +559,30 @@ header {
 .posts {
     height: 752px;
     background-color: #fff;
+    &__title {
+        margin: 0;
+    }
 }
 
 .partners {
     height: 488px;
-    background-image: url(../img/partners/partners-bg.png);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../img/partners/partners-bg.png);
     @include bg;
     background-position: center;
+    &__items {
+        @include flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 12%;
+    }
+    &__item {
+        width: 18rem;
+        height: 18rem;
+    }
 }
 
 .footer {
