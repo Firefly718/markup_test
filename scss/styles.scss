@@ -460,15 +460,16 @@ header {
 .counters {
     height: 297px;
     background: $grad-bg;
+    padding-top: 4%;
     &__items {
         @include flex;
         justify-content: space-evenly;
-        outline: 2px dashed pink;
+        // outline: 2px dashed pink;
         @include text;
     }
-    &__item {
-        outline: 2px dashed burlywood;
-    }
+    // &__item {
+    //     outline: 2px dashed burlywood;
+    // }
     &__num {
         color: #fff;
         font-size: 4.8rem;
@@ -477,6 +478,7 @@ header {
             &::before {
                 background-image: url(../img/counters/client-icon.svg);
                 @include iconBefore;
+                background-size: contain;
                 width: 5rem;
                 height: 5rem;
             }
@@ -485,6 +487,7 @@ header {
             &::before {
                 background-image: url(../img/counters/cup-icon.svg);
                 @include iconBefore;
+                background-size: contain;
                 width: 5rem;
                 height: 5rem;
             }
@@ -493,6 +496,7 @@ header {
             &::before {
                 background-image: url(../img/counters/chat-icon.svg);
                 @include iconBefore;
+                background-size: contain;
                 width: 5rem;
                 height: 5rem;
             }
@@ -501,6 +505,7 @@ header {
             &::before {
                 background-image: url(../img/counters/heart-icon.svg);
                 @include iconBefore;
+                background-size: contain;
                 width: 5rem;
                 height: 5rem;
             }
@@ -509,8 +514,10 @@ header {
             &::before {
                 background-image: url(../img/counters/launch-icon.svg);
                 @include iconBefore;
+                background-size: contain;
                 width: 5rem;
                 height: 5rem;
+                background-position-y: bottom;
             }
         }
     }
@@ -520,6 +527,31 @@ header {
         font-size: 1.4rem;
         line-height: 2rem;
         color: $link-active;
+        &--clients {
+            &::after {
+                @include line;
+            } 
+        }
+        &--cups {
+            &::after {
+                @include line;
+            } 
+        }
+        &--blogs {
+            &::after {
+                @include line;
+            } 
+        }
+        &--likes {
+            &::after {
+                @include line;
+            } 
+        }
+        &--launches {
+            &::after {
+                @include line;
+            } 
+        }
     }
 }
 
