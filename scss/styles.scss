@@ -277,8 +277,8 @@ header {
             grid-area: 1 / 2 / 2 / 3;
             // background-image: url(../img/projects/grid-book.png);
             background: linear-gradient(
-            rgba(0, 0, 0, 0.7), 
-            rgba(0, 0, 0, 0.7)
+            rgba(0, 0, 0, 0.5), 
+            rgba(0, 0, 0, 0.5)
             ),
             url(../img/projects/grid-stone.png);
             @include bgCard;
@@ -353,6 +353,46 @@ header {
 
 .video {
     height: 706px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../img/video/video-bg.png);
+    @include bg;
+    &__title {
+        margin: 0;
+        @include title;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 500;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        padding-top: 15%;
+        &::before {
+            background-image: url(../img/video/play-icon.svg);
+            @include iconBefore;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    &__subtitle {
+        @include text;
+        color: #fff;
+        width: 571px;
+        height: 58px;
+        margin: auto;
+        // padding-bottom: 3.4rem;
+    }
+    &__time {
+        @include text;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        font-weight: 400;
+        color: $link-active;
+        display: block;
+        margin-top: 3.4rem;
+    }
 }
 
 .mobile {

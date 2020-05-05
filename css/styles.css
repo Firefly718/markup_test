@@ -477,7 +477,6 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
-    color: #8c8c8c;
     width: 768px;
     height: 65px;
     margin: auto; }
@@ -534,7 +533,6 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
-    color: #8c8c8c;
     font-size: 1.8rem;
     color: #615855; }
   .text__link {
@@ -576,7 +574,6 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
-    color: #8c8c8c;
     margin: auto;
     width: 770px;
     height: 65px; }
@@ -604,7 +601,6 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
-    color: #8c8c8c;
     padding: 0.8rem 2.6rem;
     border-radius: 5px;
     border: 1px solid rgba(128, 128, 128, 0.2); }
@@ -627,9 +623,9 @@ header {
     background-repeat: no-repeat; }
   .projects__card--sec {
     grid-area: 1 / 2 / 2 / 3;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/projects/grid-stone.png);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/projects/grid-stone.png);
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/projects/grid-stone.png);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/projects/grid-stone.png);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/projects/grid-stone.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/projects/grid-stone.png);
     background-size: 97% 234px;
     background-repeat: no-repeat; }
   .projects__card--third {
@@ -683,7 +679,6 @@ header {
       font-family: "Montserrat";
       font-weight: 300;
       text-align: center;
-      color: #8c8c8c;
       color: #d1d1d1;
       font-size: 1.4rem;
       line-height: 2rem; }
@@ -707,7 +702,58 @@ header {
     margin-top: 5rem; }
 
 .video {
-  height: 706px; }
+  height: 706px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/video/video-bg.png);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/video/video-bg.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/video/video-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .video__title {
+    margin: 0;
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #555555;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    padding-top: 15%; }
+    .video__title::before {
+      background-image: url(../img/video/play-icon.svg);
+      content: "";
+      display: block;
+      background-size: cover;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 3rem auto;
+      background-repeat: no-repeat;
+      width: 10rem;
+      height: 10rem; }
+  .video__subtitle {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    width: 571px;
+    height: 58px;
+    margin: auto; }
+  .video__time {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: #c7b299;
+    display: block;
+    margin-top: 3.4rem; }
 
 .mobile {
   height: 694px;
