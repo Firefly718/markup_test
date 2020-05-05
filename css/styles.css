@@ -548,6 +548,7 @@ header {
     font-family: "Raleway";
     font-weight: 800;
     text-align: center;
+    text-transform: uppercase;
     width: 17rem;
     height: 4.6rem;
     border-radius: 5px;
@@ -565,7 +566,9 @@ header {
     font-weight: 600;
     text-align: center;
     color: #555555;
-    font-size: 3rem; }
+    font-size: 3rem;
+    margin-top: 0;
+    padding-top: 8rem; }
   .projects__subtitle {
     font-size: 1.6rem;
     line-height: 2.8rem;
@@ -611,7 +614,6 @@ header {
       border: none; }
   .projects__cards {
     display: grid;
-    outline: 2px dashed green;
     min-height: 70rem;
     margin-top: 4rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -625,7 +627,9 @@ header {
     background-repeat: no-repeat; }
   .projects__card--sec {
     grid-area: 1 / 2 / 2 / 3;
-    background-image: url(../img/projects/grid-book.png);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/projects/grid-stone.png);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/projects/grid-stone.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/projects/grid-stone.png);
     background-size: 97% 234px;
     background-repeat: no-repeat; }
   .projects__card--third {
@@ -635,17 +639,17 @@ header {
     background-repeat: no-repeat; }
   .projects__card--fourth {
     grid-area: 2 / 1 / 3 / 2;
-    background-image: url(../img/projects/grid-book.png);
+    background-image: url(../img/projects/grid-birds.png);
     background-size: 97% 234px;
     background-repeat: no-repeat; }
   .projects__card--fifth {
     grid-area: 2 / 2 / 3 / 3;
-    background-image: url(../img/projects/grid-book.png);
+    background-image: url(../img/projects/grid-journal.png);
     background-size: 97% 234px;
     background-repeat: no-repeat; }
   .projects__card--sixth {
     grid-area: 2 / 3 / 3 / 4;
-    background-image: url(../img/projects/grid-book.png);
+    background-image: url(../img/projects/grid-sea.png);
     background-size: 97% 234px;
     background-repeat: no-repeat;
     z-index: 1; }
@@ -656,27 +660,51 @@ header {
     background-color: #fbfaf8;
     z-index: 2;
     padding: 2.4rem 3rem 2.4rem 3rem; }
-  .projects__title {
-    display: block;
-    width: 312px;
-    height: 27px;
-    font-size: 2rem;
-    color: #c7b299;
-    font-family: "Raleway";
-    font-weight: 500;
-    -moz-text-align-last: left;
-    text-align-last: left; }
-  .projects__subtitle {
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-    color: #8c8c8c;
-    font-family: "Montserrat";
-    font-weight: 300;
-    text-align: center;
-    color: #8c8c8c;
-    color: #d1d1d1;
+    .projects__text--active {
+      background-color: #352f2d; }
+    .projects__text--active span:first-child {
+      color: #fff; }
+    .projects__text--active span:last-child {
+      color: #c7b299; }
+    .projects__text--title {
+      display: block;
+      width: 312px;
+      height: 27px;
+      font-size: 2rem;
+      color: #c7b299;
+      font-family: "Raleway";
+      font-weight: 500;
+      -moz-text-align-last: left;
+      text-align-last: left; }
+    .projects__text--subtitle {
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      color: #8c8c8c;
+      font-family: "Montserrat";
+      font-weight: 300;
+      text-align: center;
+      color: #8c8c8c;
+      color: #d1d1d1;
+      font-size: 1.4rem;
+      line-height: 2rem; }
+  .projects__button {
     font-size: 1.4rem;
-    line-height: 2rem; }
+    line-height: 2.3rem;
+    color: #ffffff;
+    font-family: "Raleway";
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    width: 17rem;
+    height: 4.6rem;
+    border-radius: 5px;
+    background-color: #988574;
+    border: 0;
+    -webkit-box-shadow: 0px 2px 0px 0px #726257;
+    box-shadow: 0px 2px 0px 0px #726257;
+    margin: auto;
+    display: block;
+    margin-top: 5rem; }
 
 .video {
   height: 706px; }
