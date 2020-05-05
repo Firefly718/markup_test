@@ -197,7 +197,6 @@ header {
         // font-family: "Raleway";
         font-weight: 400;
         color: #fff;
-        margin: 0;
     }
     &__subtitle {
         @include text;
@@ -360,7 +359,6 @@ header {
       url(../img/video/video-bg.png);
     @include bg;
     &__title {
-        margin: 0;
         @include title;
         color: #fff;
         font-size: 3rem;
@@ -426,7 +424,6 @@ header {
         align-self: center;
     }
     &__title {
-        margin: 0;
         @include title;
         padding-top: 6rem;
     }
@@ -463,6 +460,67 @@ header {
 .counters {
     height: 297px;
     background: $grad-bg;
+    &__items {
+        @include flex;
+        justify-content: space-evenly;
+        outline: 2px dashed pink;
+        @include text;
+    }
+    &__item {
+        outline: 2px dashed burlywood;
+    }
+    &__num {
+        color: #fff;
+        font-size: 4.8rem;
+        line-height: 3.6rem;
+        &--clients {
+            &::before {
+                background-image: url(../img/counters/client-icon.svg);
+                @include iconBefore;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        &--cups {
+            &::before {
+                background-image: url(../img/counters/cup-icon.svg);
+                @include iconBefore;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        &--blogs {
+            &::before {
+                background-image: url(../img/counters/chat-icon.svg);
+                @include iconBefore;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        &--likes {
+            &::before {
+                background-image: url(../img/counters/heart-icon.svg);
+                @include iconBefore;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        &--launches {
+            &::before {
+                background-image: url(../img/counters/launch-icon.svg);
+                @include iconBefore;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
+    &__text {
+        width: 170px;
+        height: 25px;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: $link-active;
+    }
 }
 
 .posts {
