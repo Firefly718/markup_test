@@ -269,7 +269,7 @@ header {
         // outline: 2px dashed cornflowerblue;
         &--first {
             grid-area: 1 / 1 / 2 / 2; 
-            background-image: url(../img/projects/grid-book.png);
+            background-image: url(../img/projects/grid-mobile.png);
             @include bgCard;
             // background-color: black;
         }
@@ -398,6 +398,66 @@ header {
 .mobile {
     height: 694px;
     background-color: $third-bg;
+    position: relative;
+    &__items {
+        // outline: 2px dashed red;
+        display: flex;
+        align-items: flex-end;
+        height: 694px;
+    }
+    &__image {
+        // outline: 2px dashed black;
+        background-image: url(../img/mobile/mobile-in-hand.png);
+        background-repeat: no-repeat;
+
+        // position: absolute;
+        // bottom: 0;
+        // left: 8%;
+
+        height: 61rem;
+        width: 43rem;
+    }
+    &__text {
+        // outline: 2px dashed green;
+        width: 70rem;
+        padding: 0 3rem 0 3rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    &__title {
+        margin: 0;
+        @include title;
+        padding-top: 6rem;
+    }
+    &__subtitle {
+        @include text;
+        text-align: left;
+    }
+    &__list {
+        @include list;
+        color: $text-color;
+        // outline: 2px dashed goldenrod;
+    }
+    &__item {
+        // text-align: center;
+        // display: inline-block;
+        display: flex;
+        align-items: center;
+        // display: table-cell;
+        // justify-content: center;
+        // vertical-align: middle;
+        padding-left: 5rem;
+        &::before {
+            background-image: url(../img/mobile/list-arrow.svg);
+            @include iconBefore;
+            display: inline-block;
+            margin: 0;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 2.5rem;
+        }
+    }
 }
 
 .counters {
