@@ -588,6 +588,54 @@ header {
 .footer {
     height: 508px;
     background-color: $footer-bg;
+    &__wrap {
+        @include flex;
+        // justify-content: space-evenly;
+        align-items: flex-start;
+        padding-top: 8rem;
+    }
+    &__item {
+        padding: 0 2rem;
+        width: 27rem;
+    }
+    &__text {
+        @include text;
+        font-size: 1.4rem;
+        text-align: left;
+        line-height: 2.4rem;
+        color: $title-color;
+    }
+    &__link {
+        @include link;
+        &::after {
+            content: "";
+            background-image: url(../img/footer/footer-arrow.svg);
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: .6rem;
+            height: .9rem;
+            margin-left: 1rem;
+        } 
+    }
+    &__title {
+        @include title;
+        font-weight: 700;
+        color: #fff;
+        font-size: 2.4rem;
+    }
+    &__list {
+        @include list;
+        color: $title-color;
+        &--item:nth-child(2) {
+            &::before {
+                @include separator;
+            }
+            &::after {
+                @include separator;
+            }
+        }
+    }
 }
 
 .bottom {
