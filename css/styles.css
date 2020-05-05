@@ -1039,6 +1039,14 @@ header {
       width: .6rem;
       height: .9rem;
       margin-left: 1rem; }
+    .footer__link--sec {
+      text-decoration: none;
+      color: #fff;
+      color: #00bff3; }
+    .footer__link--third {
+      text-decoration: none;
+      color: #fff;
+      color: #959595; }
   .footer__title {
     font-size: 2.2rem;
     font-family: 'Raleway', sans-serif;
@@ -1048,7 +1056,8 @@ header {
     margin: 0;
     font-weight: 700;
     color: #fff;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem; }
   .footer__list {
     list-style: none;
     padding: 0;
@@ -1068,6 +1077,51 @@ header {
       height: 1px;
       background-color: #555555;
       margin: 1rem 0; }
+  .footer__time {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    -moz-text-align-last: left;
+    text-align-last: left;
+    color: #363636; }
+  .footer__grid {
+    display: grid;
+    min-height: 20.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem; }
+    .footer__grid--tl {
+      grid-area: 1 / 1 / 2 / 2;
+      background-image: url(../img/footer/devices.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center; }
+    .footer__grid--tr {
+      grid-area: 1 / 2 / 2 / 3;
+      background-image: url(../img/footer/bag.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: bottom; }
+    .footer__grid--bl {
+      grid-area: 2 / 1 / 3 / 2;
+      background-image: url(../img/projects/grid-journal.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center; }
+    .footer__grid--br {
+      grid-area: 2 / 2 / 3 / 3;
+      background-image: url(../img/footer/pattern.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-size: 100% 100%; }
 
 .bottom {
   height: 112px;
