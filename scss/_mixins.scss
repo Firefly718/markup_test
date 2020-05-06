@@ -60,6 +60,13 @@
     background-repeat: no-repeat;
 }
 
+@mixin icon {
+    background-size: contain;
+    width: 5rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+}
+
 @mixin flex {
     display: flex;
     justify-content: space-between;
