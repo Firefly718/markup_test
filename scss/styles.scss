@@ -25,6 +25,7 @@ body {
 }
 
 // -------------------------------------------------- HEADER
+
 .first-section {
     // background-image: url(../img/header/bg-header.png);
     background: linear-gradient(
@@ -39,12 +40,18 @@ body {
 header {
     @include flex;
     // outline: 2px green dashed;
+    flex-direction: column;
     padding-top: 3.6rem;
+}
+
+.nav {
+    @include flex;
+    width: 100%;
 }
 
 .menu {
     // outline: 2px orange dashed;
-    margin: auto;
+    // margin: auto;
     &__items {
         @include flex;
         @include list;
@@ -66,11 +73,36 @@ header {
     }
 }
 
+.button {
+    @include button;
+}
+
 
 // -------------------------------------------------- SLIDER
+
 .slider {
-    width: 1920px;
-    height: 100vh;
+    max-width: 105%;
+    margin-top: 14rem;
+    margin-bottom: 5rem;
+    &__uptitle {
+        @include title;
+        font-size: 3.6rem;
+        font-weight: 600;
+        color: #fff;
+    }
+    &__title {
+        @include title;
+        font-size: 5.2rem;
+        font-weight: 800;
+        color: #fff;
+    }
+    &__subtitle {
+        @include text;
+        width: 100rem;
+        // text-align: center;
+        margin: auto;
+        line-height: 2.4rem;
+    }
 }
 
 // -------------------------------------------------- SERVICES

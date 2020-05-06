@@ -345,39 +345,105 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-top: 3.6rem; }
 
-.menu {
-  margin: auto; }
-  .menu__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .menu__item {
-    padding: 0 1.2rem; }
-  .menu__item:nth-last-child(2) {
-    padding-left: 48px; }
-  .menu__link {
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 1.4rem; }
-    .menu__link--active {
-      color: #c7b299; }
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%; }
+
+.menu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.menu__item {
+  padding: 0 1.2rem; }
+
+.menu__item:nth-last-child(2) {
+  padding-left: 48px; }
+
+.menu__link {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 .5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem; }
+  .menu__link--active {
+    color: #c7b299; }
+
+.button {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  width: 17rem;
+  height: 4.6rem;
+  border-radius: 5px;
+  background-color: #988574;
+  border: 0;
+  -webkit-box-shadow: 0px 2px 0px 0px #726257;
+  box-shadow: 0px 2px 0px 0px #726257; }
 
 .slider {
-  width: 1920px;
-  height: 100vh; }
+  max-width: 105%;
+  margin-top: 14rem;
+  margin-bottom: 5rem; }
+  .slider__uptitle {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #555555;
+    margin: 0;
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #fff; }
+  .slider__title {
+    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #555555;
+    margin: 0;
+    font-size: 5.2rem;
+    font-weight: 800;
+    color: #fff; }
+  .slider__subtitle {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-align: center;
+    padding: 0 1rem;
+    width: 100rem;
+    margin: auto;
+    line-height: 2.4rem; }
 
 .services {
   height: 372px;
@@ -479,6 +545,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     width: 768px;
     height: 65px;
     margin: auto; }
@@ -535,11 +602,13 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     font-size: 1.8rem;
     color: #615855; }
   .text__link {
     text-decoration: none;
     color: #fff;
+    padding: 0 .5rem;
     color: #c7b299; }
   .text__button {
     font-size: 1.4rem;
@@ -577,6 +646,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     margin: auto;
     width: 770px;
     height: 65px; }
@@ -604,6 +674,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     padding: 0.8rem 2.6rem;
     border-radius: 5px;
     border: 1px solid rgba(128, 128, 128, 0.2); }
@@ -673,6 +744,7 @@ header {
       color: #c7b299;
       font-family: "Raleway";
       font-weight: 500;
+      padding: 0 1rem;
       -moz-text-align-last: left;
       text-align-last: left; }
     .projects__text--subtitle {
@@ -682,6 +754,7 @@ header {
       font-family: "Montserrat";
       font-weight: 300;
       text-align: center;
+      padding: 0 1rem;
       color: #d1d1d1;
       font-size: 1.4rem;
       line-height: 2rem; }
@@ -740,6 +813,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     color: #fff;
     width: 571px;
     height: 58px;
@@ -751,6 +825,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 400;
@@ -802,6 +877,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     text-align: left; }
   .mobile__list {
     list-style: none;
@@ -855,7 +931,8 @@ header {
     color: #8c8c8c;
     font-family: "Montserrat";
     font-weight: 300;
-    text-align: center; }
+    text-align: center;
+    padding: 0 1rem; }
   .counters__num {
     color: #fff;
     font-size: 4.8rem;
@@ -1023,13 +1100,15 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     font-size: 1.4rem;
     text-align: left;
     line-height: 2.4rem;
     color: #555555; }
   .footer__link {
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    padding: 0 .5rem; }
     .footer__link::after {
       content: "";
       background-image: url(../img/footer/footer-arrow.svg);
@@ -1042,10 +1121,12 @@ header {
     .footer__link--sec {
       text-decoration: none;
       color: #fff;
+      padding: 0 .5rem;
       color: #00bff3; }
     .footer__link--third {
       text-decoration: none;
       color: #fff;
+      padding: 0 .5rem;
       color: #959595; }
   .footer__title {
     font-size: 2.2rem;
@@ -1085,6 +1166,7 @@ header {
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
     font-size: 1.2rem;
     line-height: 2rem;
     -moz-text-align-last: left;
@@ -1173,10 +1255,12 @@ header {
   .bottom__link {
     text-decoration: none;
     color: #fff;
+    padding: 0 .5rem;
     color: #8c8c8c; }
     .bottom__link--name {
       text-decoration: none;
       color: #fff;
+      padding: 0 .5rem;
       color: #959595; }
   .bottom__item:not(:last-of-type)::after {
     content: "|";

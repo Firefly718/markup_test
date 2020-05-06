@@ -6,6 +6,7 @@
     text-align: center;
     color: $title-color;
     margin: 0;
+    // padding: 0 1rem;
 }
 
 @mixin text {
@@ -15,6 +16,7 @@
     font-family: "Montserrat";
     font-weight: 300;
     text-align: center;
+    padding: 0 1rem;
 }
 
 @mixin titleGrid {
@@ -24,11 +26,13 @@
     color: $link-active;
     font-family: "Raleway";
     font-weight: 500;
+    padding: 0 1rem;
 }
 
 @mixin link {
     text-decoration: none;
     color: #fff;
+    padding: 0 .5rem;
 }
 
 @mixin list {
