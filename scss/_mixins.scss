@@ -172,4 +172,25 @@
     margin: 1rem 0;
 }
 
+
+@mixin dotsSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $dots-color;
+    margin: 5px 0 0 5px;
+}
+
+@mixin activeDotsSlider {
+    width: 1rem;
+    height: 1rem;
+    margin: 3px 0 0 3px;
+    border: 2px solid $brand-color;
+    border-radius: 50%;
+    background-color: transparent;
+}
 // --------------------------------------------- end of templates elements

@@ -118,25 +118,12 @@ header {
 }
 
 .slick-dots li button:before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: '';
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: $dots-color;
-    margin: 5px 0 0 5px;
+    @include dotsSlider;
 }
 
 .slick-dots li.slick-active button {
     // outline: 1px dashed yellow;
-    width: 1rem;
-    height: 1rem;
-    margin: 3px 0 0 3px;
-    border: 2px solid $brand-color;
-    border-radius: 50%;
-    background-color: transparent;
+    @include activeDotsSlider;
 }
 
 .slick-dots li.button:hover,
@@ -719,6 +706,25 @@ header {
         width: 37rem;
         position: relative;
     }
+    &__slider {
+        &--item {
+        width: 94%;
+        }
+        &--item > .slick-dots {
+            // outline: 2px dashed yellow;
+            bottom: 1.5rem;
+        }
+        &--item > .slick-dots li button:before {
+            @include dotsSlider;
+            background: white;
+        }
+        &--item > .slick-dots li.button:hover:before {
+            background-color: transparent;
+        }
+        &--item > .slick-dots li.slick-active button:before {
+            background-color: transparent;
+        }
+    }
     &__image {
         // outline: 2px dashed green;
         margin: 0;
@@ -726,6 +732,7 @@ header {
         height: 100%;
         width: 93.5%;
         position: relative;
+        background-size: cover;
     }
     &__text {
         height: 17.4rem;
@@ -761,10 +768,13 @@ header {
             font-weight: 400;
             @include flexCenter;
             background-color: $date-sec-bg;
-            height: 2.4rem;
+            height: 2.6rem;
+            border-radius: 0 0 5px 5px;
         }
     }
 }
+
+
 
 // -------------------------------------------------- PARNTERS
 .partners {
