@@ -137,29 +137,37 @@ header {
     background-color: transparent;
 }
 
-// arrows
+// -------------------------------------------------- ARROWS
 .prewArrow {
     background-image: url(../img/slider/left-arrow.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4rem;
-    height: 8rem;
-    position: absolute;
-    top: 25%;
+    @include arrowSlider;
     margin-left: -25rem;
 }
 
 .nextArrow {
     background-image: url(../img/slider/right-arrow.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4rem;
-    height: 8rem;
-    position: absolute;
-    top: 25%;
+    @include arrowSlider;
     right: 0;
     margin-right: -25rem;
 }
+
+// .prewArrow-circle {
+//     background-image: url(../img/slider/left-arrow-circle.svg);
+//     @include arrowSliderCircle;
+//     background-color: red;
+//     // display: inline-block;
+//     left: 45%;
+//     bottom: 0;
+// }
+
+// .nextArrow-circle {
+//     background-image: url(../img/slider/left-arrow-circle.svg);
+//     @include arrowSliderCircle;
+//     background-color: royalblue;
+//     // display: inline-block;
+//     transform: rotate(180deg);
+//     left: 50%;
+// }
 
 // -------------------------------------------------- SERVICES
 .services {
@@ -702,13 +710,19 @@ header {
         margin: 1.5rem;
     }
     &__picture {
-        height: 22rem;
+        height: 23rem;
         width: 37rem;
         position: relative;
+        &--slider {
+            height: 23rem;
+            width: 36.8rem;
+            position: relative;        }
     }
     &__slider {
+        position: relative;
         &--item {
         width: 94%;
+        // height: 95%;
         }
         &--item > .slick-dots {
             // outline: 2px dashed yellow;
@@ -732,7 +746,9 @@ header {
         height: 100%;
         width: 93.5%;
         position: relative;
-        background-size: cover;
+        // background-size: 120% 120%;
+        // height: max-content;
+        // background-size: auto;
     }
     &__text {
         height: 17.4rem;
@@ -772,8 +788,26 @@ header {
             border-radius: 0 0 5px 5px;
         }
     }
+    &__arrows {
+        display: flex;
+        justify-content: center;
+        &--left {
+            background-image: url(../img/slider/left-arrow-circle.svg);
+            width: 2.2rem;
+            height: 2.2rem;
+            margin: 4rem .4rem 1rem 1rem;
+            // outline: 2px dashed blue;
+        }
+        &--right {
+            background-image: url(../img/slider/left-arrow-circle.svg);
+            width: 2.2rem;
+            height: 2.2rem;
+            margin: 4rem 1rem 1rem .4rem;
+            // outline: 2px dashed blue;
+            transform: rotate(180deg);
+        }
+    }
 }
-
 
 
 // -------------------------------------------------- PARNTERS

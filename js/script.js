@@ -12,14 +12,15 @@ $('.posts__slider').slick({
   autoplay: false,
   dots: false,
   slidesToShow: 3,
-  slidesToScroll: 1
-  // prevArrow: '<span class="prewArrow"><span>',
-  // nextArrow:'<span class="nextArrow"><span>'
+  slidesToScroll: 1,
+  prevArrow: $('.posts__arrows--left'),
+  nextArrow: $('.posts__arrows--right')
 });
 
 $('.posts__slider--item').slick({
   autoplay: false,
   dots: true,
+  arrows: false,
   slidesToShow: 1,
   slidesToScroll: 1
 });

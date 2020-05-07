@@ -172,7 +172,9 @@
     margin: 1rem 0;
 }
 
+// --------------------------------------------- end of templates elements
 
+// --------------------------------------------- SLIDER
 @mixin dotsSlider {
     display: flex;
     align-items: center;
@@ -193,4 +195,20 @@
     border-radius: 50%;
     background-color: transparent;
 }
-// --------------------------------------------- end of templates elements
+
+@mixin arrowSlider {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 8rem;
+    position: absolute;
+    top: 25%;
+}
+
+// @mixin arrowSliderCircle {
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     width: 2.2rem;
+//     height: 2.2rem;
+//     position: absolute;
+// }
