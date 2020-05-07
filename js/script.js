@@ -1,25 +1,15 @@
-// slick's script
-// $(document).ready(function(){
-//   $('.slider').slick({
-//     setting-name: setting-value
-//   });
-// });
-
-
-// another works script
-// $(function(){
-//   $('.slider').slick({
-//     // autoplay = true;
-//     // dots = true;
-//   });
-// });
-
 $('.slider').slick({
-  autoplay: false,
+  autoplay: true,
   dots: true,
   prevArrow: '<span class="prewArrow"><span>',
   nextArrow:'<span class="nextArrow"><span>'
-  // nextArrow: 'src: ../img/slider/right-arrow.svg'
-  // prevArrow: '<div class="arrow arrow--left"></div>'
-  // infinite: true
+});
+
+$('.posts__slider').slick({
+  autoplay: false,
+  dots: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  prevArrow: '<span class="prewArrow"><span>',
+  nextArrow:'<span class="nextArrow"><span>'
 });

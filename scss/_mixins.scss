@@ -60,6 +60,19 @@
     background-repeat: no-repeat;
 }
 
+@mixin iconAfter {
+    content: "";
+    // background-color: red;
+    // color: red;
+    // fill: red;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: .6rem;
+    height: .9rem;
+    margin-left: 1rem;
+}
+
 @mixin icon {
     background-size: contain;
     width: 5rem;
@@ -70,6 +83,12 @@
 @mixin flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -152,4 +171,5 @@
     background-color: $title-color;
     margin: 1rem 0;
 }
+
 // --------------------------------------------- end of templates elements
