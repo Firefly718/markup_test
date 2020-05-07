@@ -314,7 +314,8 @@ template {
 
 html {
   height: 100%;
-  font-size: 10px; }
+  font-size: 10px;
+  scroll-behavior: smooth; }
 
 body {
   min-height: 100%;
@@ -390,13 +391,22 @@ header {
   padding: 0 .5rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 1.4rem; }
-  .menu__link--active {
+  font-size: 1.4rem;
+  -webkit-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  transition: all .4s ease-in; }
+  .menu__link:hover, .menu__link:focus, .menu__link:active {
     color: #c7b299; }
 
 .slider {
   max-width: 70%;
   margin-top: 10rem; }
+  .slider__item {
+    -webkit-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in; }
+    .slider__item:hover, .slider__item:focus, .slider__item:active {
+      outline: none; }
   .slider__uptitle {
     font-size: 2.2rem;
     font-family: 'Raleway', sans-serif;
@@ -445,7 +455,12 @@ header {
     -webkit-box-shadow: 0px 2px 0px 0px #726257;
     box-shadow: 0px 2px 0px 0px #726257;
     display: block;
-    margin: auto; }
+    margin: auto;
+    -webkit-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in; }
+    .slider__button:hover, .slider__button:focus, .slider__button:active {
+      background-color: #352f2d; }
 
 .slick-dots {
   bottom: -15%; }

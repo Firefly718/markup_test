@@ -12,6 +12,7 @@
 
     <title>Waxom</title>
 </head>
+
 <body>
     <div class="first-section">
         <div class="container">
@@ -25,23 +26,23 @@
                             </li>
     
                             <li class="menu__item">
-                                <a class="menu__link menu__link--active" href="#">About Us</a>
+                                <a class="menu__link menu__link--active" href="#about">About Us</a>
                             </li>
     
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Portfolio</a>
+                                <a class="menu__link" href="#projects">Portfolio</a>
                             </li>
     
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Features</a>
+                                <a class="menu__link" href="#mobile">Features</a>
                             </li>
     
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Blog</a>
+                                <a class="menu__link" href="#posts">Blog</a>
                             </li>
     
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Pricing</a>
+                                <a class="menu__link" href="#text">Pricing</a>
                             </li>
     
                             <li class="menu__item">
@@ -49,12 +50,15 @@
                             </li>
     
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Contact</a>
+                                <a class="menu__link" href="#footer">Contact</a>
                             </li>
     
                             <li class="menu__item">
                                 <a class="menu__link" href="#">
-                                    <img src="./img/header/Cart.svg" alt="cart-icon">
+                                    <img class="menu__link--cart" src="./img/header/Cart.svg" alt="cart-icon">
+                                    <!-- <svg class="menu__link--cart">
+                                        <use xlink:href="cart-icon"></use>
+                                    </svg> -->
                                 </a>
                             </li>
     
@@ -68,7 +72,7 @@
                 </nav>
 
                 <div class="slider">
-                    <div class="first-slider">
+                    <div class="slider__item">
                         <h3 class="slider__uptitle">Unique and Modern Design</h3>
                         <h1 class="slider__title">Portfolio PSD Template</h1>
 
@@ -77,7 +81,7 @@
                         <button class="slider__button">Get Started</button>
                     </div>
             
-                    <div class="second-slider">
+                    <div class="slider__item">
                         <h3 class="slider__uptitle">Unique and Modern Design 2</h3>
                         <h1 class="slider__title">Portfolio PSD Template 2</h1>
 
@@ -87,7 +91,7 @@
                         <button class="slider__button">Get Started</button>
                     </div>
             
-                    <div class="third-slider">
+                    <div class="slider__item">
                         <h3 class="slider__uptitle">Unique and Modern Design 3</h3>
                         <h1 class="slider__title">Portfolio PSD Template 3</h1>
 
@@ -96,7 +100,7 @@
                         <button class="slider__button">Get Started</button>
                     </div>
             
-                    <div class="fourth-slider">
+                    <div class="slider__item">
                         <h3 class="slider__uptitle">Unique and Modern Design 4</h3>
                         <h1 class="slider__title">Portfolio PSD Template 4</h1>
 
@@ -105,7 +109,7 @@
                         <button class="slider__button">Get Started</button>
                     </div>
             
-                    <div class="fifth-slider">
+                    <div class="slider__item">
                         <h3 class="slider__uptitle">Unique and Modern Design 5</h3>
                         <h1 class="slider__title">Portfolio PSD Template 5</h1>
 
@@ -122,7 +126,7 @@
     </div>
     
     <main>
-        <div class="services">
+        <div class="services" id="about">
             <div class="container">
                 <div class="services__items">
                     <div class="services__item">
@@ -157,7 +161,7 @@
             </div>
         </div>
 
-        <div class="works">
+        <div class="works" id="works">
             <div class="container">
                 <div class="works__items">
                     <h3 class="works__title">Waxom is Realization of your Ideas.</h3>
@@ -170,7 +174,7 @@
             </div>
         </div>
 
-        <div class="text">
+        <div class="text" id="text">
             <div class="container">
                 <div class="text__items">
                     <div class="text__item">
@@ -189,7 +193,7 @@
             </div>
         </div>
 
-        <div class="projects">
+        <div class="projects" id="projects">
             <div class="container">
                 <div class="projects__items">
                     <h3 class="projects__title">Our Latest Projects.</h3>
@@ -254,13 +258,13 @@
             </div>
         </div>
 
-        <div class="video">
+        <div class="video" id="video">
             <h3 class="video__title">Waxom Video Presentation</h3>
             <p class="video__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
             <span class="video__time">03:26</span>
         </div>
 
-        <div class="mobile">
+        <div class="mobile" id="mobile">
             <div class="container">
                 <div class="mobile__items">
                     <div class="mobile__image"></div>
@@ -280,7 +284,7 @@
             </div>
         </div>
 
-        <div class="counters">
+        <div class="counters" id="counters">
             <div class="container">
                 <div class="counters__items">
                     <div class="counters__item">
@@ -312,7 +316,7 @@
         </div>
 
         <!-- slider ↓ -->
-        <div class="posts">
+        <div class="posts" id="posts">
             <div class="container">
                 <div class="posts__items"> 
                     <h3 class="posts__title">Recent Posts.</h3>
@@ -514,7 +518,7 @@
     </main>
 
     <footer>
-        <div class="footer">
+        <div class="footer" id="footer">
             <div class="container">
                 <div class="footer__wrap">
                     <div class="footer__about footer__item">
@@ -613,6 +617,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- SVGs -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 27" width="20" height="27" id="cart-icon">
+        <style>
+            tspan { white-space:pre }
+            .shp0 { fill: #ffffff } 
+        </style>
+        <g id="HEADER">
+            <g id="Cart">
+                <path id="icon-cart" class="shp0" d="M16 5L14.5 5C14.5 3.34 12.48 2 10 2C7.51 2 5.5 3.34 5.5 5L4 5C2.35 5 1 6.34 1 8L1 23C1 24.65 2.35 25.99 4 25.99L16 25.99C17.65 25.99 18.99 24.65 18.99 23L18.99 8C18.99 6.34 17.65 5 16 5ZM10 3.5C11.66 3.5 13 3.96 13 5L7 5C7 3.96 8.34 3.5 10 3.5ZM17.49 23C17.49 23.82 16.82 24.49 16 24.49L4 24.49C3.17 24.49 2.5 23.82 2.5 23L2.5 21.5L17.49 21.5L17.49 23ZM17.49 20L2.5 20L2.5 8C2.5 7.17 3.17 6.5 4 6.5L5.5 6.5L5.5 11L7 11L7 6.5L13 6.5L13 11L14.5 11L14.5 6.5L16 6.5C16.82 6.5 17.49 7.17 17.49 8L17.49 20Z" />
+            </g>
+        </g>
+    </svg>
+
+    <!-- SCRIPTS -->
 
     <script src="js/jquery.js"></script>
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
