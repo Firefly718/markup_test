@@ -349,7 +349,8 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-top: 3.6rem; }
+  padding-top: 3.6rem;
+  position: relative; }
 
 .nav {
   display: -webkit-box;
@@ -396,8 +397,7 @@ header {
 .slider {
   outline: 2px dashed yellow;
   max-width: 70%;
-  margin-top: 14rem;
-  margin-bottom: 5rem; }
+  margin-top: 10rem; }
   .slider__uptitle {
     font-size: 2.2rem;
     font-family: 'Raleway', sans-serif;
@@ -447,6 +447,9 @@ header {
     box-shadow: 0px 2px 0px 0px #726257;
     display: block;
     margin: auto; }
+
+.slick-dots {
+  bottom: -15%; }
 
 .slick-dots li button:before {
   display: -webkit-box;
