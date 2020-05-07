@@ -16,7 +16,9 @@
 
 $('.slider').slick({
   autoplay: false,
-  dots: true
+  dots: true,
+  prevArrow: '<span class="prewArrow"><span>',
+  nextArrow:'<span class="nextArrow"><span>'
   // nextArrow: 'src: ../img/slider/right-arrow.svg'
   // prevArrow: '<div class="arrow arrow--left"></div>'
   // infinite: true

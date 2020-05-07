@@ -78,12 +78,8 @@ header {
 
 
 // -------------------------------------------------- SLIDER
-    // .slider-wrap {
-    //     display: flex;
-    // }
-
 .slider {
-    outline: 2px dashed yellow;
+    // outline: 2px dashed yellow;
     max-width: 70%;
     margin-top: 10rem;
     // min-height: 10rem;
@@ -114,21 +110,11 @@ header {
         display: block;
         margin: auto;
     }
-    // &::before {
-    //     background-image: url(../img/slider/left-arrow.svg);
-    //     @include icon;
-    // }
-    // &::after {
-    //     background-image: url(../img/slider/right-arrow.svg);
-    //     @include icon;
-    // }
 }
 
 // -------------------------------------------------- SLICK DOTS
 .slick-dots {
-    // position: absolute;
     bottom: -15%;
-    // margin: 0;
 }
 
 .slick-dots li button:before {
@@ -164,23 +150,29 @@ header {
     background-color: transparent;
 }
 
-// .slick-prev:before {
-//     background-color: transparent;
-//     content: '';
-//     background-image: url(../img/slider/left-arrow.svg);
-//     @include icon;
-// }
+// arrows
+.prewArrow {
+    background-image: url(../img/slider/left-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 8rem;
+    position: absolute;
+    top: 25%;
+    margin-left: -25rem;
+}
 
-// .arrow {
-//     &--right {
-//         background-image: url(../img/slider/right-arrow.svg);
-//         @include icon;
-//     }
-//     &--left {
-//         background-image: url(../img/slider/left-arrow.svg);
-//         @include icon;
-//     }
-// }
+.nextArrow {
+    background-image: url(../img/slider/right-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 8rem;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    margin-right: -25rem;
+}
 
 // -------------------------------------------------- SERVICES
 .services {

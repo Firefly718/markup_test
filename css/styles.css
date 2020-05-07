@@ -395,7 +395,6 @@ header {
     color: #c7b299; }
 
 .slider {
-  outline: 2px dashed yellow;
   max-width: 70%;
   margin-top: 10rem; }
   .slider__uptitle {
@@ -483,6 +482,27 @@ header {
 .slick-dots li.button:hover:before,
 .slick-dots li.slick-active button:before {
   background-color: transparent; }
+
+.prewArrow {
+  background-image: url(../img/slider/left-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4rem;
+  height: 8rem;
+  position: absolute;
+  top: 25%;
+  margin-left: -25rem; }
+
+.nextArrow {
+  background-image: url(../img/slider/right-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4rem;
+  height: 8rem;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  margin-right: -25rem; }
 
 .services {
   height: 372px;
