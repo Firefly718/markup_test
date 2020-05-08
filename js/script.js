@@ -1,3 +1,4 @@
+// -------------------------------------------------- SLIDER
 $('.slider').slick({
   autoplay: true,
   dots: true,
@@ -24,3 +25,11 @@ $('.posts__slider--item').slick({
   slidesToShow: 1,
   slidesToScroll: 1
 });
+
+// -------------------------------------------------- COUNTER
+// jQuery(document).ready(function($) {
+//   $('.counters__num').counterUp({
+//       delay: 10,
+//       time: 1000
+//   });
+// });

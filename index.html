@@ -201,7 +201,7 @@
         
                     <div class="projects__grid">
                         <ul class="projects__menu">
-                            <li class="projects__item projects__item--active">All</li>
+                            <li class="projects__item">All</li>
                             <li class="projects__item">Web Design</li>
                             <li class="projects__item">Mobile App</li>
                             <li class="projects__item">Illustration</li>
@@ -573,10 +573,21 @@
                     <div class="footer__widget footer__item">
                         <h3 class="footer__title">Dribble Widget</h3>
                         <div class="footer__grid">
-                            <div class="footer__grid--tl"></div> <!-- tl = top-left -->
-                            <div class="footer__grid--tr"></div> <!-- tr = top-right -->
-                            <div class="footer__grid--bl"></div> <!-- bl = bottom-left -->
-                            <div class="footer__grid--br"></div> <!-- br = bottom-right -->
+                            <div class="footer__grid--tl">
+                                <a class="footer__link--grid" href="#mobile"></a>
+                            </div> <!-- tl = top-left -->
+
+                            <div class="footer__grid--tr">
+                                <a class="footer__link--grid" href="#text"></a>
+                            </div> <!-- tr = top-right -->
+
+                            <div class="footer__grid--bl">
+                                <a class="footer__link--grid" href="#projects"></a>
+                            </div> <!-- bl = bottom-left -->
+
+                            <div class="footer__grid--br">
+                                <a class="footer__link--grid" href="#posts"></a>
+                            </div> <!-- br = bottom-right -->
                         </div>
                     </div>
                 </div>
@@ -592,13 +603,17 @@
                                 <a class="bottom__link--name" href="#">Waxom</a>
                             </li>
 
-                            <li class="bottom__item">Privacy Policy</li>
+                            <li class="bottom__item">
+                                <a class="bottom__link href="#">Privacy Policy</a>
+                            </li>
 
                             <li class="bottom__item">
                                 <a class="bottom__link" href="#">FAQ</a>
                             </li>
 
-                            <li class="bottom__item">Support</li>
+                            <li class="bottom__item">
+                                <a class="bottom__link href="#">Support</a>
+                            </li>
                         </ul>
                     </div>
         
@@ -619,7 +634,7 @@
     </footer>
 
     <!-- SVGs -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 27" width="20" height="27" id="cart-icon">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 27" width="20" height="27" id="cart-icon">
         <style>
             tspan { white-space:pre }
             .shp0 { fill: #ffffff } 
@@ -629,13 +644,14 @@
                 <path id="icon-cart" class="shp0" d="M16 5L14.5 5C14.5 3.34 12.48 2 10 2C7.51 2 5.5 3.34 5.5 5L4 5C2.35 5 1 6.34 1 8L1 23C1 24.65 2.35 25.99 4 25.99L16 25.99C17.65 25.99 18.99 24.65 18.99 23L18.99 8C18.99 6.34 17.65 5 16 5ZM10 3.5C11.66 3.5 13 3.96 13 5L7 5C7 3.96 8.34 3.5 10 3.5ZM17.49 23C17.49 23.82 16.82 24.49 16 24.49L4 24.49C3.17 24.49 2.5 23.82 2.5 23L2.5 21.5L17.49 21.5L17.49 23ZM17.49 20L2.5 20L2.5 8C2.5 7.17 3.17 6.5 4 6.5L5.5 6.5L5.5 11L7 11L7 6.5L13 6.5L13 11L14.5 11L14.5 6.5L16 6.5C16.82 6.5 17.49 7.17 17.49 8L17.49 20Z" />
             </g>
         </g>
-    </svg>
+    </svg> -->
 
     <!-- SCRIPTS -->
 
     <script src="js/jquery.js"></script>
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> -->
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>

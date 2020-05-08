@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 13" width="34" height="13">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #fbf9f7 } 
+	</style>
+	<g id="CONTENT">
+		<g id="Latest Projects">
+			<g id="Project 03">
+				<g id="Txt">
+					<path id="arrow" class="shp0" d="M17 2L32.01 12L1.99 12L17 2Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
