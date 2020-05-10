@@ -376,22 +376,19 @@ header {
 
 .subnav {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: none;
   position: relative; }
   @media screen and (max-width: 1024px) {
     .subnav {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   @media screen and (max-width: 768px) {
     .subnav {
       display: block; } }
@@ -449,7 +446,7 @@ header {
     border-radius: 0 0 5px 5px; }
   .subnav__link {
     display: block;
-    width: 14%;
+    width: 100%;
     padding: 1rem;
     text-decoration: none;
     color: #fff;
@@ -525,12 +522,20 @@ label {
       fill: #c7b299; }
 
 .slider {
+  outline: 2px dashed yellow;
   max-width: 70%;
   margin-top: 10rem; }
+  @media screen and (max-width: 1024px) {
+    .slider {
+      margin-top: 6rem; } }
   .slider__item {
+    outline: 2px solid orange;
     -webkit-transition: all .4s ease-in;
     -o-transition: all .4s ease-in;
     transition: all .4s ease-in; }
+    @media screen and (max-width: 1024px) {
+      .slider__item {
+        max-height: 30rem; } }
     .slider__item:hover, .slider__item:focus, .slider__item:active {
       outline: none; }
   .slider__uptitle {
@@ -543,6 +548,9 @@ label {
     font-size: 3.6rem;
     font-weight: 600;
     color: #fff; }
+    @media screen and (max-width: 1024px) {
+      .slider__uptitle {
+        font-size: 2.2rem; } }
   .slider__title {
     font-size: 2.2rem;
     font-family: 'Raleway', sans-serif;
@@ -553,6 +561,9 @@ label {
     font-size: 5.2rem;
     font-weight: 800;
     color: #fff; }
+    @media screen and (max-width: 1024px) {
+      .slider__title {
+        font-size: 4rem; } }
   .slider__subtitle {
     font-size: 1.6rem;
     line-height: 2.8rem;
@@ -565,6 +576,10 @@ label {
     margin: auto;
     line-height: 2.4rem;
     margin-bottom: 5rem; }
+    @media screen and (max-width: 1024px) {
+      .slider__subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem; } }
   .slider__button {
     font-size: 1.4rem;
     line-height: 2.3rem;
