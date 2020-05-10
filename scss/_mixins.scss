@@ -50,6 +50,13 @@
     bottom: 0;
 }
 
+@mixin iconServices {
+    fill: $title-color;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 3rem;
+}
+
 @mixin iconBefore {
     content: "";
     display: block;

@@ -10,6 +10,9 @@ html {
     height: 100%;
     font-size: 10px;
     scroll-behavior: smooth;
+    @media screen and (max-width: 1024px) {
+        overflow-x: hidden;
+    }
 }
 
 body {
@@ -36,6 +39,10 @@ body {
       url(../img/header/bg-header.png);
     @include bg;
     min-height: 100vh;
+    // min-width: 100%;
+    @media screen and (max-width: 1024px) {
+        min-width: 100%;
+    }
 }
 
 header {
@@ -49,14 +56,139 @@ header {
 .nav {
     @include flex;
     width: 100%;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }
 
+// -------------------------------------------------- MOBILE MENU
+.nav-mobile {
+    // outline: 2px dashed yellow;
+    position: relative;
+    @media screen and (max-width: 1440px) {
+         @include flex;
+         width: 100%;
+         height: 7rem;
+    }
+    @media screen and (max-width: 1024px) {
+        display: block;
+    }
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+    @media screen and (max-width: 425px) {
+        display: block;
+    }
+    @media screen and (max-width: 375px) {
+        display: block;
+    }
+    @media screen and (max-width: 320px) {
+        display: block;
+    }
+}
+
+#check-menu {
+    display: none;
+}
+
+label {
+    // outline: 2px dashed red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    // display: flex;
+}
+
+// .burger-lines {
+//     display: flex;
+// }
+
+.burger-line {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 3rem;
+    height: 2px;
+    background-color: #fff;
+    @include tr;
+}
+
+.second, .third {
+    top: 2rem;
+}
+
+.fourth {
+    top: 3rem;
+}
+
+.main-menu {
+    display: block;
+    position: absolute;
+    width: 14%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    @include tr;
+    border-radius: 0 0 5px 5px;
+}
+
+.burger-link {
+    display: block;
+    width: 14%;
+    padding: 1rem;
+    @include link;
+    // background-color: $brand-color;
+}
+
+.main-menu:last-child {
+    border-radius: 0 0 1rem 1rem;
+}
+
+#check-menu:checked ~ label {
+    border: 1px solid $brand-color;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#check-menu:checked ~ .main-menu {
+    max-height: 50rem;
+    font-size: 1.6rem;
+    border: 1px solid $brand-color;
+}
+
+#check-menu:checked ~ .first {
+    display: none;
+}
+
+#check-menu:checked ~ .second {
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third {
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth {
+    display: none;
+}
+
+// -------------------------------------------------- MAIN MENU
 .menu {
-    // outline: 2px orange dashed;
+    outline: 2px orange dashed;
     // margin: auto;
     &__items {
         @include flex;
         @include list;
+        // outline: 2px dashed red;
+        // @media screen and (max-width: 1024px) {
+        //         width: 500px;
+        // }
     }
     &__item {
         padding: 0 1.2rem;
@@ -72,13 +204,23 @@ header {
         @include hover {
             color: $link-active;
         }
-        // &--cart {
-        //     // width: 5rem;
-        //     // height: 5rem;
-        //     // color: red;
-        //     // fill: wheat;
-        //     // background: #000;
-        // }
+        &--cart {
+            // width: 10rem;
+            // height: 10rem;
+            // color: red;
+            fill: #fff;
+            // outline: 2px dashed yellow;
+            // background: #000;
+            @include hover {
+                fill: $link-active;
+            }
+        }
+        &--search {
+            fill: #fff;
+            @include hover {
+                fill: $link-active;
+            }
+        }
         // &--active {
         //     color: $link-active;
         // }
@@ -170,24 +312,6 @@ header {
     margin-right: -25rem;
 }
 
-// .prewArrow-circle {
-//     background-image: url(../img/slider/left-arrow-circle.svg);
-//     @include arrowSliderCircle;
-//     background-color: red;
-//     // display: inline-block;
-//     left: 45%;
-//     bottom: 0;
-// }
-
-// .nextArrow-circle {
-//     background-image: url(../img/slider/left-arrow-circle.svg);
-//     @include arrowSliderCircle;
-//     background-color: royalblue;
-//     // display: inline-block;
-//     transform: rotate(180deg);
-//     left: 50%;
-// }
-
 // -------------------------------------------------- SERVICES
 .services {
     height: 372px;
@@ -199,37 +323,49 @@ header {
         @include flex;
         // outline: 2px dashed orangered;
     }
+    // &__item {
+    //     @include hover {
+    //         color: $link-active;
+    //         fill: $link-active;
+    //         background-color: $link-active;
+    //     }
+    // }
+    &__subitem {
+        @include flex;
+        flex-direction: column;
+        @include tr;
+        &:hover svg {
+            @include tr;
+            // color: $link-active;
+            fill: $link-active;
+            // background-color: $link-active;
+        }
+        &:hover span {
+            @include tr;
+            color: $link-active;
+        }
+        &:hover .services__subtitle::after {
+            @include tr;
+            background-color: $link-active;
+        }
+    }
+    &__icon {
+        &--pen {
+            @include iconServices;
+        }
+        &--dev {
+            @include iconServices;
+        }
+        &--cust {
+            @include iconServices;
+        }
+        &--mark {
+            @include iconServices;
+        }
+    }
     &__title {
         @include title;
         // outline: 2px dashed orange;
-        &--pen {
-            &::before {
-                background-image: url(../img/services/icon-pencil.svg);
-                @include iconBefore;
-            }
-        }
-        &--dev {
-            color: $link-active;
-            &::before {
-                background-image: url(../img/services/icon-dev.svg);
-                @include iconBefore;
-            }
-        }
-        &--cust {
-            &::before {
-                background-image: url(../img/services/icon-cust.svg);
-                @include iconBefore;
-                // outline: 2px dashed saddlebrown;
-            }
-        }
-        &--mark {
-            &::before {
-                background-image: url(../img/services/icon-mark.svg);
-                @include iconBefore;
-                background-size: 100% 100%;
-                // outline: 2px dashed saddlebrown;
-            }
-        }
     }
     &__subtitle {
         font-size: 1.4rem;
@@ -242,19 +378,19 @@ header {
             background-color: #f1eee9;
             margin: 3rem auto 0 auto;
         }
-        &--active {
-            &::after {
-                background-color: $link-active;
-            }
-        }
+        // &--active {
+        //     &::after {
+        //         background-color: $link-active;
+        //     }
+        // }
     }
-    &__icon {
-        display: block;
-        outline: 2px dashed greenyellow;
-        margin-bottom: 2.6rem;
-        // text-align: center;
-        margin: 0 auto 2.6rem auto;
-    }
+    // &__icon {
+    //     display: block;
+    //     outline: 2px dashed greenyellow;
+    //     margin-bottom: 2.6rem;
+    //     // text-align: center;
+    //     margin: 0 auto 2.6rem auto;
+    // }
 }
 
 // -------------------------------------------------- WORKS
@@ -454,10 +590,12 @@ header {
         width: 97%;
         // display: block;
         margin-top: 63%;
+        margin-right: 0;
         // outline: 2px dashed pink;
         background-color: $third-bg;
         z-index: 2;
         padding: 2.4rem 3rem 2.4rem 3rem;
+        position: relative;
         &--active {
             background-color: $card-active;
         }
@@ -479,6 +617,14 @@ header {
             font-size: 1.4rem;
             line-height: 2rem;
             // outline: 2px dashed red;
+        }
+    }
+    &__triangle {
+        position: absolute;
+        top: -1rem;
+        fill: $third-bg;
+        &--active {
+            fill: $card-active;
         }
     }
     &__button {
@@ -876,6 +1022,9 @@ header {
     &__item {
         width: 18rem;
         height: 18rem;
+        @include hover {
+            transform: scale(1.3);
+        }
     }
 }
 
