@@ -80,18 +80,21 @@ header {
         @include flex;
         // height: 10rem;
     }
+    @media screen and (max-width: 425px) {
+        justify-content: space-between;
+    }
     // @media screen and (max-width: 768px) {
     //     display: block;
     // }
-    @media screen and (max-width: 425px) {
-        display: block;
-    }
-    @media screen and (max-width: 375px) {
-        display: block;
-    }
-    @media screen and (max-width: 320px) {
-        display: block;
-    }
+    // @media screen and (max-width: 425px) {
+    //     display: ;
+    // }
+    // @media screen and (max-width: 375px) {
+    //     display: block;
+    // }
+    // @media screen and (max-width: 320px) {
+    //     display: block;
+    // }
     // &__burger {
     //     position: relative;
     //     width: 100%;
@@ -104,6 +107,10 @@ header {
             width: 3rem;
             height: 2px;
             background-color: #fff;
+            @media screen and (max-width: 425px) {
+                top: 1.5rem;
+                left: 0;
+            }
         }
         &--second {
             position: absolute;
@@ -112,6 +119,10 @@ header {
             width: 3rem;
             height: 2px;
             background-color: #fff;
+            @media screen and (max-width: 425px) {
+                top: 2.5rem;
+                left: 0;
+            }
         }
         &--third {
             position: absolute;
@@ -120,9 +131,13 @@ header {
             width: 3rem;
             height: 2px;
             background-color: #fff;
-            @include hover {
-                top: 3rem;
+            @media screen and (max-width: 425px) {
+                top: 3.5rem;
+                left: 0;
             }
+            // @include hover {
+            //     top: 3rem;
+            // }
         }
         // outline: 2px dashed red;
         // position: absolute;
@@ -157,7 +172,19 @@ header {
         //     }
         // }
     }
+    &__search {
+        width: 3rem;
+        height: 3rem;
+        fill: #fff;
+        // outline: 1px dashed red;
+    }
+    &__logo {
+        width: 6rem;
+        margin-left: 3rem;
+        // outline: 1px dashed orange;
+    }
     &__menu {
+        // outline: 1px dashed blue;
         display: block;
         position: absolute;
         width: 14%;
@@ -169,12 +196,21 @@ header {
         overflow: hidden;
         @include tr;
         border-radius: 0 0 5px 5px;
+        @media screen and (max-width: 425px) {
+            width: 27%;
+            background-color: $brand-color;
+            z-index: 9999;
+            // border: 2px solid $card-active;
+        }
     }
     &__link {
         display: block;
         width: 100%;
         padding: 1rem;
         @include link;
+        @media screen and (max-width: 425px) {
+            color: $card-active;
+        }
     }
 }
 
@@ -191,6 +227,9 @@ label {
     height: 100%;
     cursor: pointer;
     z-index: 2;
+    @media screen and (max-width: 425px) {
+        width: 27%;
+    }
     // display: flex;
 }
 
@@ -198,12 +237,18 @@ label {
     border: 1px solid $brand-color;
     border-radius: 1rem 1rem 0 0;
     border-bottom: none;
+    // @media screen and (max-width: 425px) {
+    //     border: 1px solid $card-active;
+    // }
 }
 
 #check-menu:checked ~ .subnav__menu {
     max-height: 50rem;
     font-size: 1.6rem;
     border: 1px solid $brand-color;
+    // @media screen and (max-width: 425px) {
+    //     border: 1px solid $card-active;
+    // }
 }
 
 // -------------------------------------------------- MAIN MENU
@@ -290,6 +335,9 @@ label {
         @media screen and (max-width: 1024px) {
             font-size: 2.2rem;
         }
+        @media screen and (max-width: 425px) {
+            font-size: 1.5rem;
+        }
         // @media screen and (max-width: 768px) {
         //     font-size: 1.2rem;
         // }
@@ -305,6 +353,9 @@ label {
         @media screen and (max-width: 768px) {
             font-size: 3.5rem;
         }
+        @media screen and (max-width: 425px) {
+            font-size: 2rem;
+        }
     }
     &__subtitle {
         @include text;
@@ -318,6 +369,9 @@ label {
             font-size: 1.2rem;
             margin-bottom: 2rem;
         }
+        // @media screen and (max-width: 425px) {
+        //     font-size: 1.2rem;
+        // }
         // @media screen and (max-width: 768px) {
         //     font-size: 1rem;
         //     // overflow: hidden;
@@ -384,16 +438,51 @@ label {
         padding-top: 4rem;
         height: 33rem;
     }
+    @media screen and (max-width: 425px) {
+        height: 60rem;
+    }
     &__items {
         @include flex;
         // outline: 2px dashed orangered;
         @media screen and (max-width: 768px) {
             align-items: flex-end;
         }
+        @media screen and (max-width: 425px) {
+            align-items: flex-start;
+            flex-flow: row wrap; // that can change rows of flex's items 
+        }
     }
     &__item {
         @media screen and (max-width: 768px) {
             padding: 0 .5rem;
+        }
+        &--first {
+            @media screen and (max-width: 425px) {
+                order: 1;
+                flex: 1 1 50%;
+                // flex: 1 1 auto;
+            }
+        }
+        &--second {
+            @media screen and (max-width: 425px) {
+                order: 2;
+                flex: 1 1 50%; // works with parent's value "flex-flow: row wrap"
+                // flex: 1 1 auto;
+            }
+        }
+        &--third {
+            @media screen and (max-width: 425px) {
+                order: 3;
+                // flex: 1 1 auto;
+                flex: 1 1 50%; 
+            }
+        }
+        &--fourth {
+            @media screen and (max-width: 425px) {
+                order: 4;
+                // flex: 1 1 auto;
+                flex: 1 1 50%;
+            }
         }
     }
     // &__item {
@@ -486,10 +575,17 @@ label {
         padding-top: 6rem;
         height: 60rem;
     }
+    @media screen and (max-width: 425px) {
+        height: 100rem;
+    }
     &__title {
         @include title;
         font-size: 3rem;
         margin-bottom: 2rem;
+        @media screen and (max-width: 425px) {
+            text-align: left;
+            padding: 0 5%;
+        }
     }
     &__subtitle {
         @include text;
@@ -498,6 +594,12 @@ label {
         margin: auto;
         @media screen and (max-width: 768px) {
             width: 80%;
+        }
+        @media screen and (max-width: 425px) {
+            text-align: left;
+            margin: 0;
+            padding: 0 5%;
+            width: 100%;
         }
     }
     &__image {
@@ -513,6 +615,10 @@ label {
                 // background-size: 50% 50%;
                 width: 65%;
             }
+            @media screen and (max-width: 425px) {
+                width: 80%;
+                top: 35rem;
+            }
         }
         &--left {
             @include posA;
@@ -523,6 +629,12 @@ label {
                 // background-size: 50% 50%;
                 width: 65%;
                 left: 7%;
+            }
+            @media screen and (max-width: 425px) {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                top: 60rem;
             }
         }
         &--right {
@@ -535,6 +647,13 @@ label {
                 width: 65%;
                 right: 7%;
             }
+            @media screen and (max-width: 425px) {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                // top: 81rem;
+                bottom: 0;
+            }
         }
     }
 }
@@ -544,11 +663,17 @@ label {
     height: 150px;
     background: $grad-bg;
     // outline: 2px dashed yellow;
+    @media screen and (max-width: 425px) {
+        height: 27rem;
+    }
     &__items {
         height: 15rem;
         @include flex;
         // align-items: center;
         // outline: 2px dashed yellow;
+        @media screen and (max-width: 425px) {
+            flex-direction: column;
+        }
     }
     &__title {
         @include title;
@@ -561,18 +686,33 @@ label {
             font-size: 2.2rem;
             text-align: left;
         }
+        @media screen and (max-width: 425px) {
+            padding: 2rem 1rem 1rem 1rem;
+        }
     }
     &__subtitle {
         @include text;
         font-size: 1.8rem;
         color: $secondary-text;
         @media screen and (max-width: 768px) {
+            display: block;
             text-align: left;
+        }
+        @media screen and (max-width: 425px) {
+            display: block;
+            height: 6rem;
+            margin-bottom: 2rem;
+            // text-align: center;
+            // outline: 2px dashed yellow;
+
         }
     }
     &__link {
         @include link;
         color: $link-active;
+        @media screen and (max-width: 425px) {
+            padding: 0;
+        }
     }
     &__button {
         @include button;
@@ -595,13 +735,20 @@ label {
     @media screen and (max-width: 768px) {
         max-height: 90rem;       
     }
+    @media screen and (max-width: 425px) {
+        min-height: 245rem;
+    }
     &__title {
         @include title;
         font-size: 3rem;
         margin-top: 0;
         padding-top: 8rem;
         @media screen and (max-width: 768px) {
-            padding-top: 5rem;
+            padding: 5rem 1rem 1rem 1rem;
+        }
+        @media screen and (max-width: 425px) {
+            padding-top: 3rem;
+            text-align: left;
         }
     }
     &__subtitle {
@@ -612,6 +759,11 @@ label {
         height: 65px;
         @media screen and (max-width: 768px) {
             width: 60rem;
+        }
+        @media screen and (max-width: 425px) {
+            text-align: left;
+            width: 100%;
+            margin-bottom: 4rem;
         }
     }
     // &__grid {
@@ -634,6 +786,9 @@ label {
             margin: 0 1%;
             padding-top: 7%;
         }
+        @media screen and (max-width: 425px) {
+            flex-flow: row wrap;
+        }
     }
     &__item {
         @include text;
@@ -645,6 +800,10 @@ label {
         @include tr;
         @media screen and (max-width: 768px) {
             padding: 0.6rem 1rem;
+        }
+        @media screen and (max-width: 425px) {
+            margin: .3rem .3rem;
+            flex: 1 1 auto;
         }
         &:hover {
             border: 1px solid $brand-color;
@@ -658,13 +817,6 @@ label {
             border: none;
         }
     }
-    // &__link {
-    //     @include link;
-    //     @include text;
-    //     width: 100%;
-    //     height: 100%;
-    //     padding: 0.8rem 2.6rem;
-    // }
     &__cards {
         display: grid;
         // outline: 2px dashed green;
@@ -684,16 +836,13 @@ label {
             // min-height: 30rem;
             grid-template-rows: 22.3rem 22.3rem;
         }
+        @media screen and (max-width: 425px) {
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+        }
     }
     &__card {
-        // outline: 2px dashed cornflowerblue;
-        // @media screen and (max-width: 1024px) {
-        //     height: 70%;
-        // }
-        // @media screen and (max-width: 1024px) {
-        //     grid-template-rows: repeat(auto-fit, minmax(3rem, 1fr));
-
-        // }
         &--first {
             grid-area: 1 / 1 / 2 / 2; 
             background-image: url(../img/projects/grid-mobile.png);
@@ -703,6 +852,9 @@ label {
             // @media screen and (max-width: 1024px) {
             //     height: 80%;
             // }
+            @media screen and (max-width: 425px) {
+                grid-area: 1 / 1 / 2 / 2;
+            }
         }
         &--sec {
             grid-area: 1 / 2 / 2 / 3;
@@ -714,24 +866,36 @@ label {
             url(../img/projects/grid-stone.png);
             @include bgCard;
             // background-color: blue;
+            @media screen and (max-width: 425px) {
+                grid-area: 2 / 1 / 3 / 2;
+            }
         }
         &--third {
             grid-area: 1 / 3 / 2 / 4;
             background-image: url(../img/projects/grid-book.png);
             @include bgCard;
             // background-color: blueviolet;
+            @media screen and (max-width: 425px) {
+                grid-area: 3 / 1 / 4 / 2;
+            }
         }
         &--fourth {
             grid-area: 2 / 1 / 3 / 2;
             background-image: url(../img/projects/grid-birds.png);
             @include bgCard;
             // background-color: green;
+            @media screen and (max-width: 425px) {
+                grid-area: 4 / 1 / 5 / 2;
+            }
         }
         &--fifth {
             grid-area: 2 / 2 / 3 / 3;
             background-image: url(../img/projects/grid-journal.png);
             @include bgCard;
             // background-color: chocolate;
+            @media screen and (max-width: 425px) {
+                grid-area: 5 / 1 / 6 / 2;
+            }
         }
         &--sixth {
             grid-area: 2 / 3 / 3 / 4;
@@ -739,6 +903,9 @@ label {
             @include bgCard;
             // background-color: red;
             z-index: 1;
+            @media screen and (max-width: 425px) {
+                grid-area: 6 / 1 / 7 / 2;
+            }
         }
     }
     &__text {
@@ -822,6 +989,9 @@ label {
     @media screen and (max-width: 768px) {
         height: 55rem;       
     }
+    @media screen and (max-width: 425px) {
+        height: 45rem;
+    }
     &__title {
         @include title;
         color: #fff;
@@ -837,6 +1007,9 @@ label {
             width: 10rem;
             height: 10rem;
         }
+        @media screen and (max-width: 425px) {
+            font-size: 2.5rem;
+        }
     }
     &__subtitle {
         @include text;
@@ -845,6 +1018,11 @@ label {
         height: 58px;
         margin: auto;
         // padding-bottom: 3.4rem;
+        @media screen and (max-width: 425px) {
+            text-align: left;
+            width: 90%;
+            padding: 0 1rem;
+        }
     }
     &__time {
         @include text;
@@ -865,6 +1043,9 @@ label {
     @media screen and (max-width: 768px) {
         height: 50rem;       
     }
+    @media screen and (max-width: 425px) {
+        height: 100rem;
+    }
     &__items {
         // outline: 2px dashed red;
         display: flex;
@@ -872,6 +1053,9 @@ label {
         height: 694px;
         @media screen and (max-width: 768px) {
             height: 50rem;   
+        }
+        @media screen and (max-width: 425px) {
+            height: 60rem;
         }
     }
     &__image {
@@ -888,6 +1072,10 @@ label {
         @media screen and (max-width: 768px) {
             background-size: contain;
             height: 40rem;
+        }
+        @media screen and (max-width: 425px) {
+            position: absolute;
+            bottom: 0;
         }
     }
     &__text {
@@ -911,6 +1099,9 @@ label {
         @media screen and (max-width: 768px) {
             padding-top: 4rem;   
         }
+        @media screen and (max-width: 425px) {
+            padding-top: 0;
+        }
     }
     &__subtitle {
         @include text;
@@ -918,18 +1109,24 @@ label {
         @media screen and (max-width: 768px) {
             font-size: 1rem;   
         }
+        @media screen and (max-width: 425px) {
+            font-size: 1.5rem;
+        }
     }
     &__list {
         @include list;
         color: $text-color;
         // text-align: left;
         // outline: 2px dashed goldenrod;
+        // text-align: left;
     }
     &__item {
+        // outline: 1px dashed green;
         // text-align: center;
         // display: inline-block;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         // display: table-cell;
         // justify-content: flex-start;
         // vertical-align: middle;
@@ -946,8 +1143,14 @@ label {
         @media screen and (max-width: 768px) {
             font-size: 1rem;
             padding: 0.5rem 0 0.5rem 2rem;
+            justify-content: start;
         }
-        justify-content: space-between;
+        @media screen and (max-width: 425px) {
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width: 425px) {
+            padding-left: 1rem;
+        }
         &::before {
             background-image: url(../img/mobile/list-arrow.svg);
             @include iconBefore;
@@ -969,7 +1172,11 @@ label {
                 width: 3rem;
                 height: 3rem;
                 background-size: 2rem 2rem;
-            } 
+            }
+            @media screen and (max-width: 425px) {
+                width: 4rem;
+                // padding-left: 1rem;
+            }
         }
     }
 }
@@ -982,6 +1189,9 @@ label {
     @media screen and (max-width: 768px) {
         height: 25rem;       
     }
+    @media screen and (max-width: 425px) {
+        height: 45rem;       
+    }
     &__items {
         @include flex;
         justify-content: space-evenly;
@@ -990,10 +1200,16 @@ label {
         @media screen and (max-width: 768px) {
             justify-content: space-between;   
         }
+        @media screen and (max-width: 425px) {
+            flex-flow: row wrap;
+        }
     }
-    // &__item {
-    //     outline: 2px dashed burlywood;
-    // }
+    &__item {
+        // outline: 2px dashed burlywood;
+        order: 1;
+        flex: 1 1 auto;
+        margin: 1rem .8rem 3rem .8rem;
+    }
     &__num {
         color: #fff;
         font-size: 4.8rem;
@@ -1113,6 +1329,10 @@ label {
         @include title;
         padding-top: 3rem;
         font-size: 3rem;
+        @media screen and (max-width: 425px) {
+            text-align: left;
+            padding: 1rem;
+        }
         &--small {
             font-size: 2rem;
             font-weight: 500;
@@ -1131,6 +1351,9 @@ label {
         @media screen and (max-width: 768px) {
             width: 60rem;
             text-align: left;
+        }
+        @media screen and (max-width: 425px) {
+            width: 100%;
         }
         &--small {
             font-size: 1.4rem;
@@ -1348,6 +1571,9 @@ label {
     @media screen and (max-width: 768px) {
         height: 30rem;
     }
+    @media screen and (max-width: 425px) {
+        height: 40rem;
+    }
     &__items {
         @include flex;
         justify-content: space-evenly;
@@ -1355,6 +1581,9 @@ label {
         padding-top: 12%;
         @media screen and (max-width: 768px) {
             justify-content: space-between;
+        }
+        @media screen and (max-width: 425px) {
+            flex-flow: row wrap;
         }
     }
     &__item {
@@ -1366,6 +1595,9 @@ label {
         @media screen and (max-width: 768px) {
             width: 14rem;
             height: 14rem;
+        }
+        @media screen and (max-width: 425px) {
+            margin-top: 1rem;
         }
     }
 }
@@ -1380,9 +1612,16 @@ label {
     @media screen and (max-width: 768px) {
         height: 80rem;
     }
+    @media screen and (max-width: 425px) {
+        height: 135rem;
+    }
     &__logo {
         @media screen and (max-width: 768px) {
             width: 12rem;
+        }
+        @media screen and (max-width: 425px) {
+            width: 80%;
+            padding: 0 1rem;
         }
     }
     &__wrap {
@@ -1403,6 +1642,9 @@ label {
             flex: 1 1 30%;
             margin-bottom: 2.5rem;
         }
+        @media screen and (max-width: 425px) {
+            flex: 1 1 auto;
+        }
     }
     &__text {
         @include text;
@@ -1419,10 +1661,16 @@ label {
         &::after {
             @include iconAfter;
             background-image: url(../img/footer/footer-arrow.svg);
-        } 
+        }
+        @media screen and (max-width: 425px) {
+            padding-left: 1rem;
+        }
         &--sec {
             @include link;
             color: $link-color;
+            @media screen and (max-width: 425px) {
+                padding: 0;
+            }
         }
         &--third {
             @include link;
@@ -1449,6 +1697,9 @@ label {
             // margin-top: 2.5rem;
             text-align: left;
         }
+        @media screen and (max-width: 425px) {
+            padding: 0 1rem;
+        }
     }
     // &__title:last-child {
     //     @media screen and (max-width: 768px) {
@@ -1464,6 +1715,11 @@ label {
             }
             &::after {
                 @include separator;
+            }
+        }
+        &--item {
+            @media screen and (max-width: 425px) {
+                padding: 0 1rem;
             }
         }
     }
@@ -1495,6 +1751,9 @@ label {
         grid-template-rows: 1fr 1fr;
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
+        @media screen and (max-width: 425px) {
+            padding: 0 1rem;
+        }
         &--tl {
             grid-area: 1 / 1 / 2 / 2; 
             background-image: url(../img/footer/devices.png);
@@ -1541,6 +1800,11 @@ label {
         // outline: 2px pink dashed;
         color: $text-color;
         width: 100%;
+        @media screen and (max-width: 425px) {
+            // width: 105%;
+            // padding: 0;
+            margin: -1rem;
+        }
         // @media screen and (max-width: 1024px) {
         //     // height: 10px;
         // }
@@ -1561,6 +1825,7 @@ label {
         }
         // width: 40rem;
         &--sec {
+            outline: 2px solid blue;
             @include list;
             @include flex;
             // width: 32rem;
@@ -1570,12 +1835,15 @@ label {
                 width: 30rem;
                 text-align: left;
             }
+            @media screen and (max-width: 425px) {
+                width: 100%;
+            }
             // @media screen and (max-width: 768px) {
             //     // display: flex;
             //     justify-content: flex-end;
             //     text-align: right;
             // }
-            outline: 2px dashed blue;
+            
         }
     }
     // &__design {
@@ -1610,6 +1878,10 @@ label {
     &__item {
         display: flex;
         justify-content: flex-start;
+        @media screen and (max-width: 425px) {
+            font-size: 1.3rem;
+            text-align: left;
+        }
     }
     &__item:not(:last-of-type) {
         // @media screen and (max-width: 1024px) {
