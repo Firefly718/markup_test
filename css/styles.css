@@ -700,6 +700,9 @@ label {
   @media screen and (max-width: 425px) {
     .services {
       height: 60rem; } }
+  @media screen and (max-width: 375px) {
+    .services {
+      height: 65rem; } }
   .services__items {
     display: -webkit-box;
     display: -ms-flexbox;

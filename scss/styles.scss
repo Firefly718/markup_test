@@ -441,6 +441,9 @@ label {
     @media screen and (max-width: 425px) {
         height: 60rem;
     }
+    @media screen and (max-width: 375px) {
+        height: 65rem;
+    }
     &__items {
         @include flex;
         // outline: 2px dashed orangered;
