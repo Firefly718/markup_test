@@ -9,22 +9,6 @@ $('.slider').slick({
   nextArrow:'<span class="nextArrow"><span>'
 });
 
-
-// function resetSlick($slick_slider, settings) {
-//   $(window).on('resize', function() {
-// if ($(window).width() < 426) {
-// if ($slick_slider.hasClass('slick-initialized')) {
-// $slick_slider.slick('unslick');
-// }
-// return
-// }
-
-// if (!$slick_slider.hasClass('slick-initialized')) {
-// return $slick_slider.slick(settings);
-// }
-// });
-// }
-
 $('.posts__slider').slick({
   autoplay: false,
   dots: false,
@@ -50,6 +34,11 @@ $('.posts__slider--item').slick({
   arrows: false,
   slidesToShow: 1,
   slidesToScroll: 1
-  // variableWidth: true
 });
 
+// -------------------------------------------------- LAZY LOAD
+$(document).ready(function() {
+  $("img.lazy").lazyload({
+    effect: "fadeIn"
+  })
+});
