@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "jquery-lazy": "^1.7.10",
+    "lozad": "^1.15.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",

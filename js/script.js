@@ -37,8 +37,33 @@ $('.posts__slider--item').slick({
 });
 
 // -------------------------------------------------- LAZY LOAD
-$(document).ready(function() {
-  $("img.lazy").lazyload({
-    effect: "fadeIn"
-  })
-});
+// #1 true
+// $(document).ready(function() {
+//   $("img.lazy").lazyload({
+//     effect: "fadeIn"
+//   })
+// });
+
+// #2 false
+// $(function() {
+//   $('.lazy').Lazy();
+// });
+
+// $('.lazy').Lazy({
+//   // your configuration goes here
+//   scrollDirection: 'vertical',
+//   effect: 'fadeIn',
+//   visibleOnly: true,
+//   onError: function(element) {
+//       console.log('error loading ' + element.data('src'));
+//   }
+// });
+
+// var lazy = $('.lazy').Lazy({ chainable: false });
+
+// var attributeName = lazy.config('attribute');  // get
+// lazy.config('effect', 'show');                 // set
+
+// #3
+const observer = lozad();
+observer.observe();
