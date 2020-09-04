@@ -340,7 +340,9 @@ body {
   min-height: 100vh; }
   @media screen and (max-width: 1024px) {
     .first-section {
-      min-width: 100%; } }
+      min-width: 100%;
+      min-height: auto;
+      padding-bottom: 10rem; } }
 
 header {
   display: -webkit-box;
@@ -546,6 +548,8 @@ label {
     .slider {
       margin-top: 6rem; } }
   .slider__item {
+    outline: 2px solid orange;
+    height: 30rem;
     -webkit-transition: all .4s ease-in;
     -o-transition: all .4s ease-in;
     transition: all .4s ease-in; }
@@ -603,7 +607,8 @@ label {
     width: 90%;
     margin: auto;
     line-height: 2.4rem;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    height: 12rem; }
     @media screen and (max-width: 1024px) {
       .slider__subtitle {
         font-size: 1.2rem;
@@ -2342,3 +2347,23 @@ label {
     @media screen and (max-width: 768px) {
       .bottom__item:not(:last-of-type)::after {
         display: none; } }
+
+.ellip {
+  display: block;
+  height: 100%; }
+
+.ellip-line {
+  display: inline-block;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  max-width: 100%; }
+
+.ellip,
+.ellip-line {
+  position: relative;
+  overflow: hidden; }
+
+.box--fixed {
+  width: 100%; }

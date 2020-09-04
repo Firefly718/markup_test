@@ -40,6 +40,8 @@ body {
     min-height: 100vh;
     @media screen and (max-width: 1024px) {
         min-width: 100%;
+        min-height: auto;
+        padding-bottom: 10rem;
     }
 }
 
@@ -230,7 +232,8 @@ label {
         margin-top: 6rem;
     }
     &__item {
-        // outline: 2px solid orange;
+        outline: 2px solid orange;
+        height: 30rem;
         @media screen and (max-width: 1024px) {
             max-height: 30rem;
         }
@@ -274,6 +277,7 @@ label {
         margin: auto;
         line-height: 2.4rem;
         margin-bottom: 5rem;
+        height: 12rem;
         @media screen and (max-width: 1024px) {
             font-size: 1.2rem;
             margin-bottom: 2rem;
@@ -1658,3 +1662,27 @@ label {
         }
     }
 }
+
+// ellipsis
+.ellip {
+    display: block;
+    height: 100%;
+  }
+  
+  .ellip-line {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    max-width: 100%;
+  }
+  
+  .ellip,
+  .ellip-line {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .box--fixed {
+      width: 100%;
+  }

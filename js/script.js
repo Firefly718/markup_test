@@ -67,3 +67,16 @@ $('.posts__slider--item').slick({
 // #3
 const observer = lozad();
 observer.observe();
+
+
+
+
+
+// ellipsis
+$('.foo').ellipsis();
+
+$('.foo').ellipsis({
+  lines: 3,             // force ellipsis after a certain number of lines. Default is 'auto'
+  ellipClass: 'ellip',  // class used for ellipsis wrapper and to namespace ellip line
+  responsive: true      // set to true if you want ellipsis to update on window resize. Default is false
+});
